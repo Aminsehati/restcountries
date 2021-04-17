@@ -1,30 +1,31 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div :class="{'dark':darkMode}">
+      <Navbar @onclick="darkMode=!darkMode" />
+      <router-view></router-view>
   </div>
-  <router-view/>
 </template>
 
+<script>
+import Navbar from './components/Navbar/Navbar';
+export default {
+  name:'App',
+  components:{Navbar},
+  data(){
+    return {
+      darkMode:false,
+    }
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.row{
+  margin-left: -15px;
+  margin-right: -15px;
+  display: flex;
+  flex-wrap: wrap;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.d-inline-block{
+  display: inline-block;
 }
 </style>

@@ -1,0 +1,20 @@
+.Navbar{
+    background:#fff;
+    padding: 15px 0;
+}
+.dark .Navbar{
+    background: #2b3743;
+}
+.dark .Navbar a ,.dark .Navbar span{
+    color: #fff;
+}
+.Navbar a{
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+}
+.Navbar span{
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
